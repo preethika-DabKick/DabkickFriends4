@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/layout_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent" >
+
+    <RelativeLayout
+         android:id="@+id/full_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:background="#EEEEEE" >
+
+        <RelativeLayout
+            android:id="@+id/mylayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/rounded_corners"
+            android:paddingBottom="10dp" >
+
+            <com.dabkick.CustomText
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="HelveticaNeue-Bold.otf"
+                android:textSize="16sp"
+                android:text="@string/cancel"
+                android:textColor="#333333" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/image_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/mylayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp" >
+
+            <ImageView
+                android:id="@+id/mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/mail_btn" />
+
+            <ImageView
+                android:id="@+id/fb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/message"
+                android:src="@drawable/fb_btn" />
+
+            <ImageView
+                android:id="@+id/twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/fb"
+                android:src="@drawable/twitter_btn" />
+
+            <ImageView
+                android:id="@+id/rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/twitter"
+                android:src="@drawable/rate_btn" />
+
+            <ImageView
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/mail"
+                android:src="@drawable/message_btn" />
+        </RelativeLayout>
+
+            <com.dabkick.CustomText
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/image_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="HelveticaNeue-Medium.otf"
+                android:text="Invite friends to download Dabkick"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+       
+    </RelativeLayout>
+</RelativeLayout>

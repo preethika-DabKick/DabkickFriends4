@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/down_arrow" />
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="226dp"
+        android:layout_below="@+id/imageView1" >
+
+        <!--
+              <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        -->
+
+        <com.dabkick.ViewFlow
+            android:id="@+id/view_flow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            app:sidebuffer="2" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/radio_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_above="@+id/line_layout" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="vertical" >
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom" />
+
+            <com.dabkick.CircleFlowIndicator
+                android:id="@+id/viewflowindic"
+                android:layout_width="wrap_content"
+                android:layout_height="21dp"
+                android:layout_gravity="top|center_horizontal"
+                android:padding="10dip"
+                app:inactiveType="fill" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/line_layout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/gridlayout"
+        android:layout_marginTop="6dp"
+        android:background="#B0B0B0" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/gridlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <GridView
+            android:id="@+id/grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:horizontalSpacing="0dp"
+            android:listSelector="@null"
+            android:numColumns="4"
+            android:verticalSpacing="0dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

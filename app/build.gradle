@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.1"
+
+    defaultConfig {
+        applicationId "com.dabkick"
+        minSdkVersion 15
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile files('D:/AndroidStudioProjects/Dabkick/libs/universal-image-loader-1.9.3.jar')
+    compile files('D:/AndroidStudioProjects/Dabkick/libs/imageloader.jar')
+    compile files('libs/imageloader.jar')
+    compile files('libs/universal-image-loader-1.9.3.jar')
+    compile project(':swipelistview')
+    compile 'com.android.support:appcompat-v7:21.0.2'
+}

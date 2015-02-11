@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+**
+** /res/layout/quickaction.xml
+**
+** Author: Lorensius W. L. T <lorenz@londatiga.net>
+**
+*/ 
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="66dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" >
+
+            <RelativeLayout
+                android:id="@+id/band"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentTop="true"
+                android:background="#FFFFFF" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:background="@color/red" >
+
+                    <RelativeLayout
+                        android:id="@+id/ok_band"
+                        android:layout_width="53dp"
+                        android:layout_height="53dp"
+                        android:background="@color/red_dark" >
+
+                        <com.dabkick.CustomText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="OK"
+                            android:fontFamily="HelveticaNeue-Italic.otf"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/message_band"
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:layout_toRightOf="@+id/ok_band"
+                        android:background="@color/red" >
+
+                        <com.dabkick.CustomText
+                             android:id="@+id/ok_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="HelveticaNeue-Italic.otf"
+                            android:text="explore the community of new dabbers"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/arrow_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="59dp"
+            android:src="@drawable/down_tail" />
+
+        <ImageView
+            android:id="@+id/arrow_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/up_tail" />
+    </RelativeLayout>
+
+</RelativeLayout>

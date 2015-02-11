@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="@android:color/transparent" >
+
+    <ImageView
+        android:id="@+id/maskView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black" >
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="1" >
+
+        <RelativeLayout
+            android:id="@+id/my_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.9" >
+
+            <RelativeLayout
+                android:id="@+id/layout_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_corners"
+                android:paddingBottom="10dp" >
+
+                <com.dabkick.CustomText
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="HelveticaNeue-Bold.otf"
+                    android:text="@string/cancel"
+                    android:textColor="#333333"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/layout_cancel"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corners" >
+
+                <RelativeLayout
+                    android:id="@+id/voice_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" >
+
+                    <com.dabkick.CustomText
+                      
+                        android:id="@+id/voice_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="HelveticaNeue-Light.otf"
+                        android:gravity="center"
+                        android:textColor="#333333"
+                        android:textSize="20sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="voice message" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/separater"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/voice_layout"
+                    android:background="#333333" >
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/video_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/separater" >
+
+                    <com.dabkick.CustomText
+                      
+                        android:id="@+id/video_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="HelveticaNeue-Light.otf"
+                        android:gravity="center"
+                        android:textColor="#333333"
+                        android:textSize="20sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="video message"  />
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="14dp"
+                        android:src="@drawable/premium_ribbon" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

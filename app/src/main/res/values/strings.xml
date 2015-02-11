@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DabKick</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="cancel">cancel</string>
+    <string name="search_by_name_or_dabname">Search by Name or Dabname</string>
+    <string name="friend_requests">friend requests</string>
+    <string name="friends">friends</string>
+    <string name="remove">remove</string>
+    <string name="queryHint">Search by Name or DabName</string>
+    <string name="leave_msg">leave a message</string>
+    <string name="wait">(if you don’t want to wait)</string>
+
+</resources>

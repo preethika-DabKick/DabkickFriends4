@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ok_relative_layout"
+    android:layout_width="53dp"
+    android:layout_height="65dp"
+    android:background="#B53333" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="OK"
+        android:textSize="14sp" />
+
+</RelativeLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="230dp" >
+
+        <ImageView
+            android:id="@+id/friend_image"
+            android:layout_width="118dp"
+            android:layout_height="90dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="88dp"
+            android:scaleType="centerCrop" />
+
+        <com.dabkick.CustomText
+            android:id="@+id/friend_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/friend_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:fontFamily="HelveticaNeue-Light.otf"
+            android:text="Preethika"
+            android:textColor="#424242"
+            android:textSize="12sp" />
+
+        <com.dabkick.CustomText
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="54dp"
+            android:textColor="@android:color/black"
+            android:fontFamily="HelveticaNeue-Medium.otf"
+            android:text="your session has ended" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/waiting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_centerHorizontal="true"
+        android:background="#0D6FDF" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true" >
+
+            <com.dabkick.CustomText
+                android:id="@+id/waiting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="HelveticaNeue-Light.otf"
+                android:text="reconnect now"
+                android:textColor="#FFFFFF"
+                android:textSize="23sp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/waiting"
+                android:src="@drawable/arrow_anim" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/waiting_layout" >
+
+        <com.dabkick.CustomText
+            android:id="@+id/CustomText01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:fontFamily="HelveticaNeue-Medium.otf"
+            android:text="share your experience"
+            android:textColor="@android:color/black" />
+
+        <RelativeLayout
+            android:id="@+id/image_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" >
+
+            <ImageView
+                android:id="@+id/fb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/fb_btn" />
+
+            <ImageView
+                android:id="@+id/twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/rate"
+                android:src="@drawable/twitter_btn" />
+
+            <ImageView
+                android:id="@+id/rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_toRightOf="@+id/fb"
+                android:src="@drawable/rate_btn" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

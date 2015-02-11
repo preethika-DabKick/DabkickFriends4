@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="140dp"
+    android:background="@drawable/rounded_corners_20radius"
+    android:orientation="vertical" >
+
+    <com.dabkick.CustomText
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="Roboto-Medium.ttf"
+        android:text="Confirmation"
+        android:textColor="#333333"
+        android:textSize="14sp" />
+
+    <com.dabkick.CustomText
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        
+        android:fontFamily="Roboto-Regular.ttf"
+        android:text="You are about to connect live with"
+        android:textColor="#333333"
+        android:textSize="14sp" />
+    
+    <com.dabkick.CustomText
+        android:id="@+id/interact_live_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="HelveticaNeue-Medium"
+        android:text="- Proceed"
+        android:textColor="#333333"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/interact_live_message" >
+
+        <RelativeLayout
+            android:id="@+id/layout_no"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@+id/relativeLayout3" >
+
+            <com.dabkick.CustomText
+                android:id="@+id/no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="false"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="HelveticaNeue-Medium"
+                android:text="No"
+                android:textColor="#0085E5"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bar_vertical"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@+id/layout_no"
+            android:background="#A9A9A9" >
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/layout_yes"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="false"
+            android:layout_toRightOf="@+id/bar_vertical" >
+
+        <com.dabkick.CustomText
+            android:id="@+id/yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentStart="false"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="HelveticaNeue-Medium"
+            android:text="Yes"
+            android:textColor="#0085E5"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#A9A9A9" >
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

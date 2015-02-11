@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <RelativeLayout 
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+    <RelativeLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="#FFFFFF" >
+
+        <include
+            android:id="@+id/searchBar"
+            layout="@layout/custom_searchview" >
+        </include>
+    </RelativeLayout>
+    
+     <RelativeLayout
+        android:id="@+id/choose_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="#FFFFFF" >
+
+       <com.dabkick.CustomText
+           android:id="@+id/choose"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:layout_centerVertical="true"
+           android:fontFamily="HelveticaNeue-Italic.otf"
+           android:text="Choose your Dabkick Friends."
+           android:textColor="@android:color/black"
+           android:textSize="14sp" />
+
+    </RelativeLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/contacts_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_bar"
+        android:divider="#999999" />
+
+    <RelativeLayout
+        android:id="@+id/blue_bar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:background="#0D6FDF" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/choose_friends"
+            android:layout_margin="5dp" >
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:scrollbars="none" >
+
+                <com.dabkick.CustomText
+                    android:id="@+id/friend_name_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="HelveticaNeue-Medium.otf"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/choose_friends"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#0058BD" >
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                 />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

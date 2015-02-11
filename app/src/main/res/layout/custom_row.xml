@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/full"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/back"
+        style="@style/MyListBackContent"
+        android:layout_height="125dp"
+        android:tag="back" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" >
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="82dp"
+            android:layout_height="match_parent"
+            android:background="#B1B1B1" >
+
+            <com.dabkick.CustomText
+                android:id="@+id/swipe_button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:text="@string/remove"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/interact"
+            android:layout_width="82dp"
+            android:layout_height="match_parent"
+            android:background="#ED1C24" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" >
+
+                <com.dabkick.CustomText
+                    android:id="@+id/interacttext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="HelveticaNeue-Medium.otf"
+                    android:text="interact"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <com.dabkick.CustomText
+                    android:id="@+id/live"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/interacttext"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="HelveticaNeue-Medium.otf"
+                    android:text="live"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/front"
+        style="@style/MyListFrontContent"
+        android:layout_height="125dp"
+        android:orientation="vertical"
+        android:tag="front" >
+
+        <RelativeLayout
+            android:id="@+id/me"
+            android:layout_width="118dp"
+            android:layout_height="85dp" >
+
+            <ImageView
+                android:id="@+id/example_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:id="@+id/friendLayout"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_alignParentBottom="true"
+                android:background="#CCED1C24" >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="false"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/check_friend" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <com.dabkick.CustomText
+            android:id="@+id/example_itemname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/me"
+            android:fontFamily="HelveticaNeue-Bold.otf"
+            android:textColor="#000000"
+            android:textSize="13sp" />
+
+        <com.dabkick.CustomText
+            android:id="@+id/item_dab"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/example_itemname"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/me"
+            android:fontFamily="HelveticaNeue-Medium.otf"
+            android:textColor="#000000"
+            android:textSize="13sp" />
+
+        <com.dabkick.CustomText
+            android:id="@+id/item_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_dab"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/me"
+            android:fontFamily="HelveticaNeue-Medium.otf"
+            android:textColor="#000000"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/front"
+        android:background="#999999" />
+
+</RelativeLayout>

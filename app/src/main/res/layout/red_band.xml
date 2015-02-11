@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/red_band"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/band"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="25dp"
+                android:background="#FFFFFF" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:background="#ED1C24" >
+
+                    <RelativeLayout
+                        android:id="@+id/ok_band"
+                        android:layout_width="53dp"
+                        android:layout_height="53dp"
+                        android:background="#B53333" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="OK"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/dab_band"
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@+id/ok_band"
+                        android:background="#ED1C24" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="explore the community of new dabbers"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="260dp"
+                android:layout_marginTop="79dp"
+                android:src="@drawable/down_tail" />
+        </RelativeLayout>

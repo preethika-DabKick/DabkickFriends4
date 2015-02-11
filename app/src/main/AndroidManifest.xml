@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dabkick"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="19" />
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+
+    <application
+        android:name="com.dabkick.DabkickApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/dabby"
+        android:label="@string/app_name"        
+        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        <activity
+            android:name="com.dabkick.homepage.HomePageActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.dabkick.contextmenu.AddFriend"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"  />
+        
+        <activity
+            android:name="com.dabkick.contextmenu.FindFriends"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" 
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dabkick.contextmenu.InviteFriends"
+            android:theme="@style/Transparent"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dabkick.freinds.FriendsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dabkick.choosefriends.ChooseFriends"
+            android:screenOrientation="portrait" />
+        
+        <activity
+            android:name="com.dabkick.livesession.InteractLiveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dabkick.livesession.LeaveMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.dabkick.contextmenu.VideoMessage"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait" />
+        
+         <activity
+            android:name="com.dabkick.contextmenu.AddMedia"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait" />
+        
+    </application>
+
+</manifest>
