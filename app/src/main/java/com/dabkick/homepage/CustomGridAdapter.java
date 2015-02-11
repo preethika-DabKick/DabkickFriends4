@@ -57,8 +57,8 @@ public class CustomGridAdapter extends BaseAdapter {
 	LinkedList<Drawable> bufferdListOfDabberImages = new LinkedList<Drawable>();
 	LinkedList<Drawable> bufferdListOfRequestImages = new LinkedList<Drawable>();
 	
-	int maxDabberListBufferSize = 2; // should be 1 more than the required buffered size of image list
-	int maxRequestListBufferSize = 2; // should be 1 more than the required buffered size of image list
+	int maxDabberListBufferSize = 1; // should be 1 more than the required buffered size of image list
+	int maxRequestListBufferSize = 1; // should be 1 more than the required buffered size of image list
 	
 	boolean isDabbersAnimationRunning = false;
 	boolean isRequestAnimationRunning = false;
@@ -199,55 +199,65 @@ public class CustomGridAdapter extends BaseAdapter {
 	}
 
 	private void setRequestsTile(View grid) {
+        isRequestAnimationRunning = false;
 		ImageView imageView = (ImageView) grid.findViewById(R.id.grid_image);
-		if(requestImageCounter>=dataRequests.length){
+
+
+        TextView textView = (TextView) grid.findViewById(R.id.grid_text);
+        textView.setText("Requests");
+        requestImageChangeAnimation = new ImageChangeAnimation(imageView,
+                mContext);
+
+        requestImageChangedListener = new RequestImageChangedListener();
+
+        requestImageChangeAnimation
+                .setOnImageChangedListener(requestImageChangedListener);
+
+		if(lastRequestImage!=null){
 			/*ImageLoader.getInstance().displayImage(dataRequests[requestImageCounter-1],
 					imageView, options);*/
 			imageView.setImageDrawable(lastRequestImage);
+            startRequestSlideShow();
 			return;
-		}
+		} else {
+            imageView.setImageDrawable(mContext.getResources().getDrawable(
+                    R.drawable.placeholder));
+            startRequestSlideShow();
+        }
 		
-		imageView.setImageDrawable(mContext.getResources().getDrawable(
-				R.drawable.placeholder));
-		lastRequestImage = mContext.getResources().getDrawable(
-				R.drawable.placeholder);
-		TextView textView = (TextView) grid.findViewById(R.id.grid_text);
-		textView.setText("Requests");
-		requestImageChangeAnimation = new ImageChangeAnimation(imageView,
-				mContext);
 
-		requestImageChangedListener = new RequestImageChangedListener();
 
-		requestImageChangeAnimation
-				.setOnImageChangedListener(requestImageChangedListener);
-		isRequestAnimationRunning = false;
-		startRequestSlideShow();
+
 	}
 
 	private void setDabbersTile(View grid) {
 		ImageView imageView = (ImageView) grid.findViewById(R.id.grid_image);
-		if(dabberImageCounter>=dataObjects.length){
+
+
+        TextView textView = (TextView) grid.findViewById(R.id.grid_text);
+        textView.setText("Dabbers");
+        dabberImageChangeAnimation = new ImageChangeAnimation(imageView,
+                mContext);
+
+        dabberImageChangedListener = new DabberImageChangedListener();
+
+        dabberImageChangeAnimation
+                .setOnImageChangedListener(dabberImageChangedListener);
+        isDabbersAnimationRunning = false;
+		if(lastDabberImage!=null){
 			/*ImageLoader.getInstance().displayImage(dataObjects[dabberImageCounter-1],
 					imageView, options);*/
 			imageView.setImageDrawable(lastDabberImage);
+            startDabberSlideShow();
 			return;
-		}
+		} else {
+            imageView.setImageDrawable(mContext.getResources().getDrawable(
+                    R.drawable.placeholder));
+            startDabberSlideShow();
+        }
 		
-		imageView.setImageDrawable(mContext.getResources().getDrawable(
-				R.drawable.placeholder));
-		lastDabberImage = mContext.getResources().getDrawable(
-				R.drawable.placeholder);
-		TextView textView = (TextView) grid.findViewById(R.id.grid_text);
-		textView.setText("Dabbers");
-		dabberImageChangeAnimation = new ImageChangeAnimation(imageView,
-				mContext);
 
-		dabberImageChangedListener = new DabberImageChangedListener();
 
-		dabberImageChangeAnimation
-				.setOnImageChangedListener(dabberImageChangedListener);
-		isDabbersAnimationRunning = false;
-		startDabberSlideShow();
 	}
 
 	private void addFriend() {

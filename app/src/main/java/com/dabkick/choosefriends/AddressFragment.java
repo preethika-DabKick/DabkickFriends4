@@ -42,6 +42,8 @@ public class AddressFragment extends Fragment {
 		LoadContacts lca = new LoadContacts();
 		lca.execute();
 
+        //addSearchView(container, view);
+
 		contacts_list.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
@@ -52,17 +54,27 @@ public class AddressFragment extends Fragment {
 		});
 		return view;
 	}
-	
-	public void params(){
-		RelativeLayout pendingRequestsLayout = (RelativeLayout) getActivity().getLayoutInflater().inflate(
-				R.layout.friend_requests, container, false);
-		LayoutParams pendingRequestParams = (LayoutParams) pendingRequestsLayout
-				.getLayoutParams();
-		
-		pendingRequestParams.addRule(RelativeLayout.BELOW, R.id.search_bar);
-		pendingRequestsLayout.setLayoutParams(pendingRequestParams);
-	}
-	
+
+    private void addSearchView(ViewGroup container, View view) {
+        RelativeLayout additionalLayout = (RelativeLayout) getActivity().getLayoutInflater().inflate(
+                R.layout.friend_requests, container, false);
+        LayoutParams pendingRequestParams = (LayoutParams) additionalLayout
+                .getLayoutParams();
+
+        pendingRequestParams.addRule(RelativeLayout.BELOW, R.id.container);
+        additionalLayout.setLayoutParams(pendingRequestParams);
+
+        try {
+            container.addView(additionalLayout);
+        } catch (IllegalStateException e) {
+            e.printStackTrace();
+        }
+        RelativeLayout relativeLayout3 = (RelativeLayout) view.findViewById(R.id.container);
+        LayoutParams lp3 = (LayoutParams) relativeLayout3
+                .getLayoutParams();
+        lp3.addRule(RelativeLayout.BELOW, R.id.parentLayout);
+    }
+
 	public void interactLive(int position) {
 		final Dialog d = new Dialog(getActivity());
 		//final String name = dbNames[position];
@@ -99,12 +111,16 @@ public class AddressFragment extends Fragment {
 				intent.putExtra("Activity", Utils.INTERACT_LIVE);
 				getActivity().overridePendingTransition(android.R.anim.fade_in, R.anim.choose_card_top_down);
 				getActivity().startActivity(intent);
-				
+
 			}
 		});
 
 		d.show();
 	}
+
+
+
+
 
 	class LoadContacts extends AsyncTask<Void, Void, ArrayList<String>> {
 		// ProgressDialog pd;
@@ -137,6 +153,7 @@ public class AddressFragment extends Fragment {
 				String phNumber = c
 						.getString(c
 								.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
+                String email = c.getString(c.getColumnIndex(ContactsContract.CommonDataKinds.Email.ADDRESS));
 				i++;
 				contacts.add(contactName);
 
